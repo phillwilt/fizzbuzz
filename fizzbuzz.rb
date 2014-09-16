@@ -6,7 +6,7 @@ def fizzbuzz(n)
 	s += 'Fizz' if n % 3 == 0
 	s += 'Buzz' if n % 5 == 0
 
-	return (s.length > 0 ? s : n)
+  s.length > 0 ? s : n
 end
 
 #Tests
