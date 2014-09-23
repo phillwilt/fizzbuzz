@@ -1,10 +1,10 @@
 class Fizzbuzz
-  def self.fizzbuzz(n)
+  def self.fizzbuzz(n, options)
     s = ''
-    s += 'Fizz' if n % 3 == 0
-    s += 'Buzz' if n % 5 == 0
-    s += 'Sivv' if n % 7 == 0
 
+    options.keys.sort!.each do |num|
+      s += options.fetch(num) if n % num == 0
+    end
     s.length > 0 ? s : n
   end
 end
