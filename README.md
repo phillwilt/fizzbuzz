@@ -1,7 +1,11 @@
 FizzBuzz
 =======
 
-Fizzbuzz question
+Allows user to input an options hash of integer to string mapping that will concatenate an output string based on modulo of that number.
 
-- modular arithmatic and string concatenation using ruby syntax
-- return using a ternary operator 
+
+Install
+
+```
+bundle install --path vendor/bundle
+```
