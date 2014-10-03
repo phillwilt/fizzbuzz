@@ -1,10 +1,13 @@
 class Fizzbuzz
-  def self.fizzbuzz(n, options)
-    s = ''
+  def initialize(mapping)
+    @mapping = mapping.sort.to_h
+  end
 
-    options.keys.sort!.each do |num|
-      s += options.fetch(num) if n % num == 0
+  def buzz(n)
+    s = ''
+    @mapping.keys.each do |num|
+      s += @mapping[num] if n % num == 0
     end
-    s.length > 0 ? s : n
+    s.empty? ? n : s
   end
 end
